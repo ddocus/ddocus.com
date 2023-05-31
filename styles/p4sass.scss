@@ -1,0 +1,260 @@
+$textfontsize: 2vw;
+$maincolor: #645CBB;
+$primaryfont: 'Inconsolata','Lora', 'Lexend Exa', Arial, Helvetica, sans-serif;
+$subfont2: 'Lora', 'Lexend Exa', Arial, Helvetica, sans-serif;
+$subfont: 'Lexend Exa', Arial, Helvetica, sans-serif;
+$anchorcolor: #D25380;
+$contactbg:#DEBACE;
+$contact-outline: solid #BA94D1;
+
+
+body{
+    background-color: #F6F1F1;
+}
+
+h1{
+    font-size: $textfontsize;
+}
+
+.grid-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto 1fr 1fr 1fr auto;
+    justify-content: center;
+    align-content: center;
+    grid-gap: 1rem;
+}
+
+.logo{
+    font-weight: bold;
+    padding-left: 2rem;
+}
+
+.header, .logo{
+    font-family: $subfont;
+    font-size: 1.1vw;
+    padding-top: 1rem;
+}
+
+.header{
+    justify-self: end;
+}
+
+.header>ul>li{
+    padding-right: .5rem;
+    padding-left: .5rem;
+}
+
+.header>ul>li>a{
+    color: black;
+    transition: color 2s;
+}
+
+.header>ul>li>a:hover{
+    color: $anchorcolor;
+    text-decoration: line-through;
+}
+
+
+
+.intro-text1{
+    font-size: 1.5vw;
+    color: $maincolor;
+}
+
+.intro-text2{
+    font-size: 3.5vw;
+}
+
+.intro-text3{
+    font-size: 1.8vw;
+}
+
+.intro-text1, .intro-text2, .intro-text3{
+    font-family: $subfont2;
+}
+
+.text-1, .text-2, .text-3, .text-4{
+    align-self: center;
+    justify-self: center;
+    font-size: $textfontsize;
+    padding: 2rem;
+    font-family: $primaryfont;
+}
+
+
+li, ul, span{
+    display: inline;
+}
+
+img{
+    width: 50%;
+    height: auto;
+}
+
+.image-1, .image-2, .image-3, .image-4{
+    display: grid;
+    place-items: center;
+}
+
+.image-2>img, .image-3>img, .image-4>img{
+    border-style: inset;
+    border-width: thick;
+    border-color: $maincolor;
+    box-shadow: 7px 7px 4px 4px rgba(0, 0, 0, 0.5);
+}
+
+.image-1>img{
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+    border: solid thin darkgrey;
+}
+
+a{
+    text-decoration:none;
+    color:$maincolor;
+    transition: color 2s;
+}
+
+a:hover{
+    color: $anchorcolor;
+}
+
+.contact{
+    grid-column-start: 1;
+    grid-column-end: -1;
+    place-self: center;
+    text-align: center;
+}
+
+// .contact-form>form>div>label{
+//     display: block;
+//     font-size: 1.5vw;
+//     font-family: $primaryfont;
+//     padding: .25rem;
+// }
+
+input[type="text"], input[type="email"]{
+    width: 30vw;
+    height: 1vw;
+    min-width: 200px;
+    min-height: 10px;
+    outline: none;
+    border: none;
+    background-color: $contactbg;
+    font-family: $subfont;
+    font-size: 1vw;
+    margin: .5vw;
+    padding: .5vw;
+}
+
+textarea{
+    width: 30vw;
+    height: 10vw;
+    resize: none;
+    min-width: 200px;
+    min-height: 75px;
+    border: none;
+    outline: none;
+    background-color: $contactbg;
+    font-family: $subfont;
+    font-size: 1vw;
+    margin: .5vw;
+    padding: .5vw;
+}
+
+input[type="button"]{
+    width: 20vw;
+    height: 2vw;
+    margin-top: 1rem;
+    min-width: 50px;
+    min-height: 30px;
+    font-size: 1vw;
+    font-family: $primaryfont;
+    border: none;
+    background-color: $contactbg;
+    transition: background-color ease-in 1s;
+    transition: color 1s;
+    margin: .5vw;
+    padding: .5vw;
+}
+
+input[type="text"]:focus, input[type="email"]:focus, textarea:focus{
+    border:$contact-outline;
+}
+
+input[type="button"]:hover{
+    background-color: rgba(230, 197, 215, 0.7);
+    color: $anchorcolor;
+}
+
+
+
+
+
+
+// MEDIA QUERIES
+
+@media screen and (max-width: 520px){
+    .grid-container{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto 1fr 1fr 1fr auto;
+    justify-content: center;
+    align-content: center;
+    grid-gap: 20px;
+    }
+
+    .header{
+        display: none;
+    }
+
+    .intro-text1{
+        font-size: 3.5vw;
+        color: $maincolor;
+    }
+    
+    .intro-text2{
+        font-size: 5.5vw;
+    }
+    
+    .intro-text3{
+        font-size: 3vw;
+    }
+
+    .logo{
+        font-weight: bold;
+        padding-left: 40px;
+        padding-top: 30px;
+        font-size: 2vw;
+    }
+
+
+    .text-1, .text-2, .text-3, .text-4{
+        align-self: center;
+        justify-self: center;
+        font-size: 4vw;
+        padding-left: 50px;
+        padding-right: 50px;
+        font-family: $primaryfont;
+    }
+
+    h1{
+        font-size: 4vw;
+    }
+
+    .contact-form>form>div>label{
+        font-size: 4vw;
+    }
+
+    input[type="button"]{
+        font-size: 3vw;
+    }
+}
+
+
+
+
+
+
+

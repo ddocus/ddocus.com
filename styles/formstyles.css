@@ -1,0 +1,33 @@
+body{
+    margin: 0;
+}
+
+header, h1{
+    display: inline-block;
+}
+
+header{
+    float: right;
+    margin-block-start: 0.67em;
+    margin-block-end: 0.67em;
+    padding-right: 2rem;
+}
+
+.header-container{
+    height: auto;
+    width: 100vw;
+}
+
+.contact-form{ 
+    text-align: center;
+    margin-top: 25px;
+}
+
+form{
+    display: inline-block;
+}
+
+label{
+    font-family: 'Inconsolata','Lora', 'Lexend Exa', Arial, Helvetica, sans-serif;;
+    font-size: 1.5vw;
+}
